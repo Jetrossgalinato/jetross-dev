@@ -1,7 +1,11 @@
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 export default function Header() {
   return (
-    <h1 className="text-black font-semibold text-center text-2xl py-20">
-      Welcome to the Landing Page
-    </h1>
+    <div className="flex flex-row flex-wrap items-center gap-12">
+      <Avatar className="size-16">
+        <AvatarImage src="/profile.jpeg" alt="@shadcn" />
+        <AvatarFallback>CN</AvatarFallback>
+      </Avatar>
+    </div>
   );
 }
