@@ -12,7 +12,7 @@ export default function Header() {
     // Added some padding to your wrapper for better spacing
     <div className="flex flex-row flex-wrap items-center gap-12 p-4">
       {/* 2. Wrap everything in the Card component */}
-      <Card className="w-[380px]">
+      <Card className="sm:w-[100px] md:w-[750px]">
         {" "}
         {/* Set a width for the card */}
         <CardHeader>
