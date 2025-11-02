@@ -12,22 +12,26 @@ export default function Header() {
     // Added some padding to your wrapper for better spacing
     <div className="flex flex-row flex-wrap items-center gap-12 p-4">
       {/* 2. Wrap everything in the Card component */}
-      <Card className="sm:w-[100px] md:w-[750px]">
+      <Card className="w-full md:w-[750px]">
         {" "}
         {/* Set a width for the card */}
         <CardHeader>
           {/* 3. Use flex to position the Avatar and text */}
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-2 sm:gap-4">
             {/* This is your existing Avatar component */}
-            <Avatar className="size-16">
+            <Avatar className="size-12 sm:size-16">
               <AvatarImage src="/profile.jpeg" alt="@shadcn" />
               <AvatarFallback>CN</AvatarFallback>
             </Avatar>
 
             {/* This is the text part of the header */}
             <div className="flex-grow">
-              <CardTitle>{"Hi! I'm Jetross Galinato"}</CardTitle>
-              <CardDescription>Full Stack Developer</CardDescription>
+              <CardTitle className="text-lg sm:text-2xl">
+                {"Hi! I'm Jetross Galinato"}
+              </CardTitle>
+              <CardDescription className="text-xs sm:text-sm">
+                Full Stack Developer
+              </CardDescription>
             </div>
           </div>
         </CardHeader>
