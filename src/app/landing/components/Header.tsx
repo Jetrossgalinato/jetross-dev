@@ -26,8 +26,8 @@ export default function Header() {
 
             {/* This is the text part of the header */}
             <div className="flex-grow">
-              <CardTitle>User Profile</CardTitle>
-              <CardDescription>Your title or email goes here.</CardDescription>
+              <CardTitle>{"Hi! I'm Jetross Galinato"}</CardTitle>
+              <CardDescription>Full Stack Developer</CardDescription>
             </div>
           </div>
         </CardHeader>
