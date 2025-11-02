@@ -5,26 +5,26 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card"; // 1. Import the card components
+} from "@/components/ui/card";
 
 export default function Header() {
   return (
-    // Added some padding to your wrapper for better spacing
     <div className="flex flex-row flex-wrap items-center gap-12 p-4">
-      {/* 2. Wrap everything in the Card component */}
       <Card className="w-full md:w-[750px]">
-        {" "}
-        {/* Set a width for the card */}
         <CardHeader>
-          {/* 3. Use flex to position the Avatar and text */}
           <div className="flex items-center gap-2 sm:gap-4">
-            {/* This is your existing Avatar component */}
-            <Avatar className="size-12 sm:size-16">
-              <AvatarImage src="/profile.jpeg" alt="@shadcn" />
-              <AvatarFallback>CN</AvatarFallback>
-            </Avatar>
+            {/* Wrapper for avatar with glowing effect */}
+            <div className="relative">
+              {/* Breathing glow effect */}
+              <div className="absolute inset-0 rounded-full ring-1 ring-green-500 shadow-md shadow-green-500/50 animate-pulse" />
 
-            {/* This is the text part of the header */}
+              {/* Avatar on top */}
+              <Avatar className="size-12 sm:size-16 relative z-10">
+                <AvatarImage src="/profile.jpeg" alt="@shadcn" />
+                <AvatarFallback>CN</AvatarFallback>
+              </Avatar>
+            </div>
+
             <div className="flex-grow">
               <CardTitle className="text-lg sm:text-2xl">
                 {"Hi! I'm Jetross Galinato"}
