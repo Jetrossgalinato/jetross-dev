@@ -10,8 +10,8 @@ import { ThemeToggle } from "./ThemeToggle";
 
 export default function Header() {
   return (
-    <div className="flex flex-row flex-wrap items-center gap-12 p-4">
-      <Card className="w-full md:w-[750px] relative">
+    <div className="flex flex-row flex-wrap items-center gap-12 p-4 transition-colors duration-300">
+      <Card className="w-full md:w-[750px] relative transition-colors duration-300">
         <div className="absolute top-4 right-4 z-10">
           <ThemeToggle />
         </div>
@@ -25,7 +25,7 @@ export default function Header() {
               {/* Avatar on top */}
               <Avatar className="size-12 sm:size-16 relative z-10">
                 <AvatarImage src="/profile.jpeg" alt="@shadcn" />
-                <AvatarFallback>CN</AvatarFallback>
+                <AvatarFallback>JG</AvatarFallback>
               </Avatar>
             </div>
 
