@@ -6,11 +6,15 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { ThemeToggle } from "./ThemeToggle";
 
 export default function Header() {
   return (
     <div className="flex flex-row flex-wrap items-center gap-12 p-4">
-      <Card className="w-full md:w-[750px]">
+      <Card className="w-full md:w-[750px] relative">
+        <div className="absolute top-4 right-4 z-10">
+          <ThemeToggle />
+        </div>
         <CardHeader>
           <div className="flex items-center gap-2 sm:gap-4">
             {/* Wrapper for avatar with glowing effect */}
