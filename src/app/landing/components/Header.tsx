@@ -45,9 +45,11 @@ export default function Header() {
           </div>
         </CardHeader>
         <CardContent>
-          <p>
-            This is the main content area. You can put stats, settings, or other
-            information here.
+          <p className="text-md text-justify">
+            I am a consistent learner who codes every day. I love programming
+            and always seek new ways to grow and improve. Building things,
+            solving problems, and learning something new is what excites me most
+            about being a developer.
           </p>
         </CardContent>
       </Card>
