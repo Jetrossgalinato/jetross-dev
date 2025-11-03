@@ -6,11 +6,16 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { ThemeToggle } from "./ThemeToggle";
+import { MapPin } from "lucide-react";
 
 export default function Header() {
   return (
-    <div className="flex flex-row flex-wrap items-center gap-12 p-4">
-      <Card className="w-full md:w-[750px]">
+    <div className="flex flex-row flex-wrap items-center gap-12 p-4 transition-colors duration-300">
+      <Card className="w-full md:w-[750px] relative transition-colors duration-300">
+        <div className="absolute top-4 right-4 z-10">
+          <ThemeToggle />
+        </div>
         <CardHeader>
           <div className="flex items-center gap-2 sm:gap-4">
             {/* Wrapper for avatar with glowing effect */}
@@ -21,24 +26,30 @@ export default function Header() {
               {/* Avatar on top */}
               <Avatar className="size-12 sm:size-16 relative z-10">
                 <AvatarImage src="/profile.jpeg" alt="@shadcn" />
-                <AvatarFallback>CN</AvatarFallback>
+                <AvatarFallback>JG</AvatarFallback>
               </Avatar>
             </div>
 
             <div className="flex-grow">
-              <CardTitle className="text-lg sm:text-2xl">
+              <CardTitle className="text-base sm:text-lg">
                 {"Hi! I'm Jetross Galinato"}
               </CardTitle>
-              <CardDescription className="text-xs sm:text-sm">
+              <CardDescription className="text-sm sm:text-base">
                 Full Stack Developer
               </CardDescription>
+              <div className="flex items-center gap-1 text-xs sm:text-sm text-muted-foreground mt-1">
+                <MapPin className="w-4 h-4 sm:w-5 sm:h-5" />
+                <span>Based in the Philippines</span>
+              </div>
             </div>
           </div>
         </CardHeader>
         <CardContent>
-          <p>
-            This is the main content area. You can put stats, settings, or other
-            information here.
+          <p className="text-md text-justify">
+            I am a consistent learner who codes every day. I love programming
+            and always seek new ways to grow and improve. Building things,
+            solving problems, and learning something new is what excites me most
+            about being a developer.
           </p>
         </CardContent>
       </Card>
