@@ -7,6 +7,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { ThemeToggle } from "./ThemeToggle";
+import { MapPin } from "lucide-react";
 
 export default function Header() {
   return (
@@ -30,12 +31,16 @@ export default function Header() {
             </div>
 
             <div className="flex-grow">
-              <CardTitle className="text-lg sm:text-2xl">
+              <CardTitle className="text-base sm:text-lg">
                 {"Hi! I'm Jetross Galinato"}
               </CardTitle>
-              <CardDescription className="text-xs sm:text-sm">
+              <CardDescription className="text-sm sm:text-base">
                 Full Stack Developer
               </CardDescription>
+              <div className="flex items-center gap-1 text-xs sm:text-sm text-muted-foreground mt-1">
+                <MapPin className="w-4 h-4 sm:w-5 sm:h-5" />
+                <span>Based in the Philippines</span>
+              </div>
             </div>
           </div>
         </CardHeader>
