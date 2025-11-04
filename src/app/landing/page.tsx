@@ -1,11 +1,12 @@
 "use client";
 import type { ReactNode } from "react";
 
-const HeaderWrapper: React.FC<{ children: ReactNode }> = ({ children }) => {
+const CardWrapper: React.FC<{ children: ReactNode }> = ({ children }) => {
   return <div className="animate-fade-in-up">{children}</div>;
 };
 
 import Header from "./components/Header";
+import Experience from "./components/Experience";
 import { Loader2 } from "lucide-react";
 import { useState, useEffect } from "react";
 
@@ -25,9 +26,13 @@ export default function LandingPage() {
         </div>
       ) : (
         <div className="flex flex-col items-center pb-64 pt-10">
-          <HeaderWrapper>
+          <CardWrapper>
             <Header />
-          </HeaderWrapper>
+          </CardWrapper>
+
+          <CardWrapper>
+            <Experience />
+          </CardWrapper>
         </div>
       )}
     </div>
